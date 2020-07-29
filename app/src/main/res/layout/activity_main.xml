@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="12sp"
+        android:paddingEnd="12dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:textSize="18sp"
+            android:text="آموزش shared preference"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:paddingStart="52dp"
+            android:paddingEnd="52dp"
+            android:src="@drawable/img_tutorial"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:startIconDrawable="@drawable/ic_user_24dp"
+            android:hint="نام و نام خانوادگی">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_main_fullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:startIconDrawable="@drawable/ic_mail"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="آدرس ایمیل">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_main_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="جنسیت"
+            android:layout_marginTop="12dp"
+            />
+
+        <RadioGroup
+            android:id="@+id/radioGroup_main_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/radioBtn_main_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="آقا"
+                />
+            <RadioButton
+                android:id="@+id/radioBtn_main_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="خانم"
+                />
+
+        </RadioGroup>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_main_save"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:text="ذخیره اطلاعات"
+            app:icon="@drawable/ic_save_24dp"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="end"
+            android:layout_marginBottom="32dp"
+            />
+    </LinearLayout>
+
+</ScrollView>
